@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/profile.css";
@@ -47,7 +48,7 @@ function Profile() {
 
   useEffect(() => {
     getUser();
-  }, [dispatch]);
+  }, []);
 
   const inputChange = (e) => {
     const { name, value } = e.target;
@@ -83,7 +84,7 @@ function Profile() {
       } else if (password !== confpassword) {
         return toast.error("Passwords do not match");
       }
-      const { data } = await toast.promise(
+      await toast.promise(
         axios.put(
           "/user/updateprofile",
           {
@@ -103,7 +104,6 @@ function Profile() {
           }
         ),
         {
-          pending: "Updating profile...",
           success: "Profile updated successfully",
           error: "Unable to update profile",
           loading: "Updating profile...",

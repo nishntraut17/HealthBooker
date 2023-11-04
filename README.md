@@ -27,3 +27,38 @@ This is a webapp where you can book an appointment with a doctor.
 </ul>
 
 <hr/>
+
+### Home Page
+![Home Page](screenshots/full_pic.png)
+
+### Doctors Page
+![Doctors Page](screenshots/doctors.png)
+
+### Apply for Doctors Page
+![Apply for Doctors Page](screenshots/docapply.png)
+
+### Book Appointment
+![Book Appointment](screenshots/book.png)
+
+### Notifications
+![Notifications Page](screenshots/notifications.png)
+
+### Profile Page
+![Profile Page](screenshots/profile.png)
+
+### Sign up Page
+![Sign up Page](screenshots/signup.png)
+
+### Sign in Page
+![Sign in Page](screenshots/signin.png)
+
+### Admin Dashboard: Users
+![Admin Dashboard: Users](screeenshots/users.png)
+
+### Admin Dashbaord: Doctors
+![Admin Dashboard: Doctors](screenshots/doctors_list.png)
+
+### Admin Dashboard: Applications
+![Admin Dashboard:  Appointments](screenshots/admin_appointments.png)
+
+

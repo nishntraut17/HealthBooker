@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../redux/reducers/rootSlice";
 import jwt_decode from "jwt-decode";
-import fetchData from "../helper/apiCall";
+// import fetchData from "../helper/apiCall";
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
@@ -50,21 +50,22 @@ function Login() {
       );
       localStorage.setItem("token", data.token);
       dispatch(setUserInfo(jwt_decode(data.token).userId));
-      getUser(jwt_decode(data.token).userId);
-    } catch (error) {
-      return error;
-    }
-  };
-
-  const getUser = async (id) => {
-    try {
-      const temp = await fetchData(`/user/getuser/${id}`);
-      dispatch(setUserInfo(temp));
+      // getUser(jwt_decode(data.token).userId);
       return navigate("/");
     } catch (error) {
       return error;
     }
   };
+
+  // const getUser = async (id) => {
+  //   try {
+  //     const temp = await fetchData(`/user/getuser/${id}`);
+  //     dispatch(setUserInfo(temp));
+  //     return navigate("/");
+  //   } catch (error) {
+  //     return error;
+  //   }
+  // };
 
   return (
     <section className="register-section flex-center">

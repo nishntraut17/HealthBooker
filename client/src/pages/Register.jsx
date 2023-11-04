@@ -67,7 +67,7 @@ function Register() {
         return toast.error("Passwords do not match");
       }
 
-      const { data } = await toast.promise(
+      await toast.promise(
         axios.post("/user/register", {
           firstname,
           lastname,
@@ -76,14 +76,13 @@ function Register() {
           pic: file,
         }),
         {
-          pending: "Registering user...",
           success: "User registered successfully",
           error: "Unable to register user",
           loading: "Registering user...",
         }
       );
       return navigate("/login");
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
